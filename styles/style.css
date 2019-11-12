@@ -38,11 +38,6 @@ a {
     width: 75%;
 }
 
-/* .ba-menu-btn:hover + .ba-menu-block,
-.ba-menu-block:hover{ */
-    /* transform: translateY(101%);
-} */
-
 .ba-menu-block{
     position: fixed;
     display: flex;
@@ -93,10 +88,27 @@ a {
     position: absolute;
     bottom: 0px;
     left: -100%;
-    transition-delay: 1.55s;
-    
-    transition: transform .4s;
-    transform: translateX(100%);
+}
+
+#menuOpen:checked~.ba-menu-block .ba-menu__item::after {
+    transform: translateX(250%);
+    transition: 1.3s;
+}
+
+#menuOpen:checked~.ba-menu-block .ba-menu__item:nth-child(1)::after{
+    transition-delay: 1.7s;
+}
+
+#menuOpen:checked~.ba-menu-block .ba-menu__item:nth-child(2)::after{
+    transition-delay: 2.5s;
+}
+
+#menuOpen:checked~.ba-menu-block .ba-menu__item:nth-child(3)::after{
+    transition-delay: 3.3s;
+}
+
+#menuOpen:checked~.ba-menu-block .ba-menu__item:nth-child(4)::after{
+    transition-delay: 4.1s;
 }
 
 #menuOpen:checked ~ .ba-menu-block .ba-menu__item{
